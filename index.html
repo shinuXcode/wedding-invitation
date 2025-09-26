@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Wedding Envelope</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- tell crawlers to ignore -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="fade-in">
+    <!-- ─── passcode overlay ─── -->
+    <div id="gate" aria-hidden="true">
+      <div class="gate-box">
+        <h3>Invitation Access</h3>
+        <p>Enter passcode to grab the card.</p>
+
+        <input
+          type="password"
+          id="gate-input"
+          placeholder="Passcode"
+          autocomplete="off"
+        />
+
+        <button id="gate-btn" class="btn">Unlock</button>
+        <p class="gate-hint">Tip: scan the printed QR for instant access.</p>
+        <div id="gate-error" role="alert" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <!-- ─── loader ─── -->
+    <div id="loader">
+      <div class="spinner"></div>
+      <div id="loader-text">Loading…</div>
+    </div>
+
+    <!-- ─── invitation card ─── -->
+    <div class="wrapper">
+      <div class="card">
+        <!-- Walima -->
+        <div class="walima">
+          <div class="arabic">وليمہ</div>
+          <div class="eng">Walima<br />RECEPTION</div>
+          <div class="date">15th Oct. 2025&nbsp;(Wednesday)</div>
+        </div>
+
+        <!-- Kausar & Rizwana -->
+        <div class="pair pair1">
+          <h2>Kausar</h2>
+          <div class="line-with-text"><span>weds</span></div>
+          <h2>Rizwana</h2>
+          <div class="date">13th Oct. 2025&nbsp;(Monday)</div>
+        </div>
+
+        <!-- ampersand -->
+        <div class="amp">&amp;</div>
+
+        <!-- Aquil & Shamrin -->
+        <div class="pair pair2">
+          <h2>Aquil</h2>
+          <div class="line-with-text"><span>weds</span></div>
+          <h2>Shamrin</h2>
+          <div class="date">3rd Oct. 2025&nbsp;(Friday)</div>
+        </div>
+
+        <!-- from address -->
+        <div class="from">
+          <strong>From</strong>
+          Md.&nbsp;Qasim<br />
+          At-Basant Pur, P.O. Mansahi<br />
+          Dist-Katihar (Bihar)<br />
+          Mb 9934246457, 7759054630
+        </div>
+
+        <!-- button -->
+        <div class="button">
+          <a href="#" class="btn" id="openBtn">OPEN CARD</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── quick config for token & passcode ─── -->
+    <script>
+      window.APP_CONFIG = {
+        tokenParam: "key", // URL query name
+        tokenValue: "sadab_01_", // value encoded in the QR
+        cookieName: "access_ok", // keeps users unlocked
+        cookieDays: 7, // cookie validity
+        simplePassword: "wedding", // fallback passcode
+      };
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
