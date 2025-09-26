@@ -3,7 +3,7 @@ const CONFIG = {
   rsvp: "https://forms.gle/yourFormId",
   map: "https://maps.google.com/?q=Venue",
   cal: "https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding&dates=20251013T140000Z/20251013T170000Z&location=Venue",
-  dl: "assets/card.jpg", // local download
+  dl: "wedding-card.png", // local download
   targetISO: "2025-10-02T00:00:00+05:30", // countdown end
 };
 
@@ -57,3 +57,4 @@ document.getElementById("calBtn").addEventListener("click", (e) => {
   e.preventDefault();
   window.open(calUrl, "_blank");
 });
+
