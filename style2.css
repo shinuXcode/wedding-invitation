@@ -392,3 +392,14 @@ body {
     align-items: flex-end;
   }
 }
+/* NEW: keep big ampersand centred on narrow phones */
+@media(max-width:500px){
+  .cols{
+    flex-direction:column;           /* stack bride & groom blocks */
+    align-items:center;              /* centre everything */
+  }
+  .amp.big{
+    order:0;                        /* show & sign after first column */
+    margin:8px 0;                    /* breathing space above/below */
+  }
+}
