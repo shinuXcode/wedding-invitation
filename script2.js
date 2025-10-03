@@ -2,7 +2,7 @@
 /* -------- configuration -------- */
 const CONFIG = {
   cal: "https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding&dates=20251013T140000Z/20251013T170000Z&location=Venue",
-  dl: "wedding-card.png",
+  dl: "wedding-invitation.jpeg",
   targetISO: "2025-10-02T00:00:00+05:30",
 };
 
@@ -45,3 +45,4 @@ document.addEventListener("DOMContentLoaded", () => {
   wire();
   countdown();
 });
+
